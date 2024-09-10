@@ -6,17 +6,20 @@
 		<link rel="stylesheet" href="estilo.css" />
 		<script src="jogo.js"></script>
 	</head>
-	<body onresize="ajustaTamanhoPalcoJogo()">
+	<body  onresize="ajustaTamanhoPalcoJogo()" >
 		<div class="painel">
 			<div class="vidas">
 				<img src="imagens/coracao_cheio.png" id="v1"/>
 				<img src="imagens/coracao_cheio.png" id="v2"/>
 				<img src="imagens/coracao_cheio.png" id="v3"/>
 			</div>
-			<div class="cronometro">Tempo</div>
+			<div class="cronometro">Tempo restante:
+				<span id="cronometro"></span></div>
 		</div>
 		<script>
-			setInterval(function() { 
+			document.getElementById('cronometro').innerHTML=tempo
+
+			var criaMosca=setInterval(function() { 
 				posicaoRandomica()
 			}, 2000)
 		</script>
