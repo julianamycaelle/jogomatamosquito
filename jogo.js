@@ -5,13 +5,13 @@ var tempo=15
 var criaMosquitoTempo=1500
 
 var nivel=window.location.search
-nivel=nivel.replace("?,")
+nivel=nivel.replace("?, ")
 
-if(nivel=='normal'){
+if(nivel=='?normal'){
 	criaMosquitoTempo=1500
-}else if(nivel =='dificil'){
+}else if(nivel =='?dificil'){
 	criaMosquitoTempo=1000
-}else if(nivel=='hard'){
+}else if(nivel=='?hard'){
 	criaMosquitoTempo=750
 }
 
@@ -104,4 +104,6 @@ function ladoAleatorio() {
 
 	}
 }
+
+
 
